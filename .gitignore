@@ -1,18 +1,181 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/w" >
+    <TextView
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button1"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="35sp"
+        android:background="@color/indigo" />
+    <TextView
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button2"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="35sp"
+        android:background="@color/lime"/>
+    <TextView
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button3"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="35sp"
+        android:background="@color/teal"/>
+    <TextView
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button4"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="35sp"
+        android:background="@color/aquamarine"/>
+    <TextView
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button5"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="35sp"
+        android:background="@color/tomato"/>
+    <TextView
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button6"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="35sp"
+        android:background="@color/purple"/>
+    <TextView
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button7"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="35sp"
+        android:background="@color/darkgreen"/>
+    <TextView
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button8"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="35sp"
+        android:background="@color/lavender"/>
+    <TextView
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Button9"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:background="@color/black"/>
+</LinearLayout>
 
-# Other files and folders
-.settings/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+package com.example.myapplication;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        final LinearLayout w = (LinearLayout) findViewById(R.id.w);
+        TextView a = (TextView) findViewById(R.id.button1);
+        TextView b = (TextView) findViewById(R.id.button2);
+        TextView c = (TextView) findViewById(R.id.button3);
+        TextView d = (TextView) findViewById(R.id.button4);
+        TextView e = (TextView) findViewById(R.id.button5);
+        TextView f = (TextView) findViewById(R.id.button6);
+        TextView g = (TextView) findViewById(R.id.button7);
+        TextView h = (TextView) findViewById(R.id.button8);
+        TextView k = (TextView) findViewById(R.id.button9);
+        a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.indigo));
+            }
+        });
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.lime));
+            }
+        });
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.teal));
+            }
+        });
+        d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.aquamarine));
+            }
+        });
+        e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.tomato));
+            }
+        });
+        f.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.purple));
+            }
+        });
+        g.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.darkgreen));
+            }
+        });
+        h.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.lavender));
+            }
+        });
+        k.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                w.setBackgroundColor(getColor(R.color.black));
+            }
+        });
+    }
+}
